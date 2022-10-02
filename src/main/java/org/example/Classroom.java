@@ -5,19 +5,31 @@ enum Gender{
     FEMALE
 }
 
+enum Nationality{
+    AZERBAIJANI,
+    BRITISH,
+    CHINESE,
+    OTHER
+}
+
 public class Classroom {
-    String studentName = "John Doe";
+    String firstName = "John";
+    String secondName = "Doe";
     int age = 20;
     double gpa = 95.5;
     Gender gender = Gender.MALE;
-    String nationality = "Azerbaijani";
+    Nationality nationality = AZERBAIJANI;
 
-    public String getStudentName() {
-        return studentName;
+    public String getStudentFullName() {
+        return firstName + " " + secondName;
     }
 
-    public void setStudentName(String studentName) {
-        this.studentName = studentName;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setSecondName(String secondName) {
+        this.secondName = secondName;
     }
 
     public int getAge() {
@@ -28,11 +40,11 @@ public class Classroom {
         this.age = age;
     }
 
-    public double getGpa() {
+    public double getGPA() {
         return gpa;
     }
 
-    public void setGpa(double gpa) {
+    public void setGPA(double gpa) {
         this.gpa = gpa;
     }
 
@@ -45,7 +57,23 @@ public class Classroom {
     }
 
     public String getNationality() {
-        return nationality;
+        String nat = "Unknown"
+        switch (this.nationality) {
+            case AZERBAIJANI:
+                nat = "Azerbaijani"
+                break;
+            case BRITISH:
+                nat = "British"
+                break;
+            case OTHER:
+                nat = "Other"
+                break;
+        
+            default:
+                break;
+        }
+        return nat;
+
     }
 
     public void setNationality(String nationality) {
