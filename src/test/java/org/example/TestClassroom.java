@@ -21,11 +21,6 @@ class TestStudent {
     }
 
     @Test
-    void testGetDefaultFullName(){
-        assertEquals("John Doe", student.getFullName());
-    }
-
-    @Test
     void testSetName(){
         student.setFirstName("Amy");
         assertEquals("Amy Doe", student.getFullName());
@@ -38,6 +33,11 @@ class TestStudent {
     void testSetAge(){
         student.setAge(23);
         assertEquals(23, student.getAge());
+    }
+
+    @Test
+    void testGender(){
+        assertEquals(Gender.FEMALE, student.setGender(Gender.FEMALE));
     }
 
     @Test
