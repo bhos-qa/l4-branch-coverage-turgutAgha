@@ -18,7 +18,7 @@ public class Student {
     int age = 20;
     double gpa = 95.5;
     Gender gender = Gender.MALE;
-    Nationality nationality = Nationality.AZERBAIJANI;
+    Nationality nationality = Nationality.OTHER;
 
     public String getFullName() {
         return this.firstName + " " + this.secondName;
@@ -65,11 +65,8 @@ public class Student {
             case CHINESE:
                 nat = "Chinese";
                 break;
-            case OTHER:
-                nat = "Other";
-                break;
-        
             default:
+                nat = "Other";
                 break;
         }
         return nat;
