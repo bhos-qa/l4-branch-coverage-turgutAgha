@@ -57,16 +57,16 @@ public class Classroom {
     }
 
     public String getNationality() {
-        String nat = "Unknown"
+        String nat = "Unknown";
         switch (this.nationality) {
             case AZERBAIJANI:
-                nat = "Azerbaijani"
+                nat = "Azerbaijani";
                 break;
             case BRITISH:
-                nat = "British"
+                nat = "British";
                 break;
             case OTHER:
-                nat = "Other"
+                nat = "Other";
                 break;
         
             default:
