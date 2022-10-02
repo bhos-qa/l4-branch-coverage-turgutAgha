@@ -18,7 +18,7 @@ public class Classroom {
     int age = 20;
     double gpa = 95.5;
     Gender gender = Gender.MALE;
-    Nationality nationality = AZERBAIJANI;
+    Nationality nationality = Nationality.AZERBAIJANI;
 
     public String getStudentFullName() {
         return firstName + " " + secondName;
@@ -76,7 +76,7 @@ public class Classroom {
 
     }
 
-    public void setNationality(String nationality) {
+    public void setNationality(Nationality nationality) {
         this.nationality = nationality;
     }
 }
