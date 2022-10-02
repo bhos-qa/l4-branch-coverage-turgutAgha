@@ -12,7 +12,7 @@ enum Nationality{
     OTHER
 }
 
-public class Classroom {
+public class Student {
     String firstName = "John";
     String secondName = "Doe";
     int age = 20;
@@ -20,8 +20,8 @@ public class Classroom {
     Gender gender = Gender.MALE;
     Nationality nationality = Nationality.AZERBAIJANI;
 
-    public String getStudentFullName() {
-        return firstName + " " + secondName;
+    public String getFullName() {
+        return this.firstName + " " + this.secondName;
     }
 
     public void setFirstName(String firstName) {
@@ -33,7 +33,7 @@ public class Classroom {
     }
 
     public int getAge() {
-        return age;
+        return this.age;
     }
 
     public void setAge(int age) {
@@ -41,19 +41,16 @@ public class Classroom {
     }
 
     public double getGPA() {
-        return gpa;
+        return this.gpa;
     }
 
     public void setGPA(double gpa) {
         this.gpa = gpa;
     }
 
-    public Gender getGender() {
-        return gender;
-    }
-
-    public void setGender(Gender gender) {
+    public Gender setGender(Gender gender) {
         this.gender = gender;
+        return this.gender;
     }
 
     public String getNationality() {

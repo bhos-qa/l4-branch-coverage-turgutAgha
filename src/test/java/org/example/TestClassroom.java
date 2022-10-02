@@ -7,13 +7,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.HashMap;
 
-class TestClassroom {
-    Classroom classroom;
+class TestStudent {
+    Student student;
     HashMap<Nationality, String> nationalities = new HashMap<>();
 
     @BeforeEach
     void setUp() {
-        classroom = new Classroom();
+        student = new Student();
         nationalities.put(Nationality.AZERBAIJANI, "Azerbaijani");
         nationalities.put(Nationality.BRITISH, "British");
         nationalities.put(Nationality.CHINESE, "Chinese");
@@ -22,35 +22,35 @@ class TestClassroom {
 
     @Test
     void testGetDefaultFullName(){
-        assertEquals("John Doe", classroom.getStudentFullName());
+        assertEquals("John Doe", student.getFullName());
     }
 
     @Test
     void testSetName(){
-        classroom.setFirstName("Amy");
-        assertEquals("Amy Doe", classroom.getStudentFullName());
+        student.setFirstName("Amy");
+        assertEquals("Amy Doe", student.getFullName());
 
-        classroom.setSecondName("Winehouse");
-        assertEquals("Amy Winehouse", classroom.getStudentFullName());
+        student.setSecondName("Winehouse");
+        assertEquals("Amy Winehouse", student.getFullName());
     }
 
     @Test
     void testSetAge(){
-        classroom.setAge(23);
-        assertEquals(23, classroom.getAge());
+        student.setAge(23);
+        assertEquals(23, student.getAge());
     }
 
     @Test
     void testNationality(){
         for (Nationality nat: nationalities.keySet()){
-            classroom.setNationality(nat);
-            assertEquals(nationalities.get(nat), classroom.getNationality());
+            student.setNationality(nat);
+            assertEquals(nationalities.get(nat), student.getNationality());
         }
     }
 
     @Test
     void testSetGPA(){
-        classroom.setGPA(90.4);
-        assertEquals(90.4, classroom.getGPA());
+        student.setGPA(90.4);
+        assertEquals(90.4, student.getGPA());
     }   
 }
