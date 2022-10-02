@@ -65,6 +65,9 @@ public class Classroom {
             case BRITISH:
                 nat = "British";
                 break;
+            case CHINESE:
+                nat = "Chinese";
+                break;
             case OTHER:
                 nat = "Other";
                 break;
