@@ -2,14 +2,14 @@ package org.example;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.turgut.*;
+import org.example.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.HashMap;
 
 class TestClassroom {
     Classroom classroom;
-    HashMap<PermissionLevel, String> nationalities = new HashMap<>();
+    HashMap<Nationality, String> nationalities = new HashMap<>();
 
     @BeforeEach
     void setUp() {
